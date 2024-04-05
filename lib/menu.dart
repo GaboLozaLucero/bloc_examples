@@ -1,5 +1,7 @@
 import 'package:bloc_practice/constant/color.dart';
+import 'package:bloc_practice/constant/widgets/custom_app_bar.dart';
 import 'package:bloc_practice/constant/widgets/menu_button.dart';
+import 'package:bloc_practice/counter/counter.dart';
 import 'package:flutter/material.dart';
 
 class Menu extends StatelessWidget {
@@ -10,19 +12,9 @@ class Menu extends StatelessWidget {
     double widthContainer = MediaQuery.of(context).size.width * 0.4;
     double heightContainer = MediaQuery.of(context).size.height * 0.22;
     return Scaffold(
+      // extendBodyBehindAppBar: true,
       backgroundColor: const Color(0xFFFEF9FD),
-      appBar: AppBar(
-        title: const Center(
-          child: Text(
-            "Bloc examples",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Color(0xFFF5F5F7),
-            ),
-          ),
-        ),
-        backgroundColor: const Color(0xFF2A4858),
-      ),
+      appBar: const CustomAppBar(title: "Bloc examples",),
       body: SingleChildScrollView(
         padding: const EdgeInsets.only(top: 20.0),
         child: Column(
@@ -80,7 +72,9 @@ class Menu extends StatelessWidget {
                         ],
                       ),
                     ),
-                    function: () {},
+                    function: () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (_)=>const CounterPage()));
+                    },
                     title: "Counter",
                     typeOfController: "Cubit"),
                 MenuButton(

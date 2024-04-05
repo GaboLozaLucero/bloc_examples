@@ -3,4 +3,5 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(const BlocExamples());
+  // GoogleFonts.config.allowRuntimeFetching=false;
 }

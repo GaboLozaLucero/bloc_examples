@@ -1,3 +1,4 @@
+import 'package:bloc_practice/constant/widgets/custom_app_bar.dart';
 import 'package:bloc_practice/counter/counter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -8,7 +9,7 @@ class CounterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Counter"),),
+      appBar: const CustomAppBar(title: "Counter",),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -19,10 +20,10 @@ class CounterView extends StatelessWidget {
             children: [
               ElevatedButton(onPressed: (){
                 context.read<CounterCubit>().increment();
-              }, child: Icon(Icons.add),),
+              }, child: const Icon(Icons.add),),
               ElevatedButton(onPressed: (){
                 context.read<CounterCubit>().decrement();
-              }, child: Icon(Icons.remove),),
+              }, child: const Icon(Icons.remove),),
             ],
           ),
         ],
