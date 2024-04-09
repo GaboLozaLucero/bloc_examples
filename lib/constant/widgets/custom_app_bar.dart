@@ -1,3 +1,4 @@
+import 'package:bloc_practice/constant/color.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -8,18 +9,60 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      title: Center(
-        child: Text(
-          title,
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Color(0xFFF5F5F7),
-          ),
+    return SafeArea(
+        child: Container(
+      decoration: const BoxDecoration(
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(10.0),
+          bottomRight: Radius.circular(10.0),
+        ),
+        color: appbarBackground,
+        border: Border(
+          bottom: BorderSide(color: black),
         ),
       ),
-      backgroundColor: const Color(0xFF2A4858),
-    );
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
+        child: Stack(
+          children: [
+            Positioned.fill(
+              child: Center(
+                child: Text(
+                  title,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: white,
+                  ),
+                ),
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                leading ??
+                    Transform.translate(
+                      offset: const Offset(-14.0, 0.0),
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            shape: const CircleBorder(),
+                            backgroundColor: appbarBackground,
+                            elevation: 0.0,
+                          ),
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: const Icon(
+                            Icons.arrow_back_ios_new,
+                            color: white,
+                          )),
+                    ),
+              ],
+            )
+          ],
+        ),
+      ),
+    ));
   }
 
   // @override
@@ -27,5 +70,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   // Size get preferredSize => throw UnimplementedError();
 
   @override
-  Size get preferredSize => const Size(double.infinity, 60);
+  Size get preferredSize => const Size(double.maxFinite, 60);
 }

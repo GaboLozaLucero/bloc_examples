@@ -9,9 +9,9 @@ class BlocExamples extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Menu(),
+      home: const Menu(),
       theme: ThemeData(
-        textTheme: GoogleFonts.ralewayTextTheme(Theme.of(context).textTheme),
+        textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme),
       ),
     );
   }

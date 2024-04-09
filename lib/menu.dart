@@ -14,7 +14,7 @@ class Menu extends StatelessWidget {
     return Scaffold(
       // extendBodyBehindAppBar: true,
       backgroundColor: const Color(0xFFFEF9FD),
-      appBar: const CustomAppBar(title: "Bloc examples",),
+      appBar: const CustomAppBar(title: "Bloc examples", leading: Icon(Icons.home_outlined, color: white),),
       body: SingleChildScrollView(
         padding: const EdgeInsets.only(top: 20.0),
         child: Column(
@@ -101,13 +101,13 @@ class Menu extends StatelessWidget {
               ],
             ),
             SizedBox(height: heightContainer * 0.1),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                MenuButton(topWidget: SizedBox(), function: () {}, title: "Test", typeOfController: "GetX"),
-                MenuButton(topWidget: SizedBox(), function: () {}, title: "Test", typeOfController: "GetX"),
-              ],
-            )
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //   children: [
+            //     MenuButton(topWidget: SizedBox(), function: () {}, title: "Test", typeOfController: "GetX"),
+            //     MenuButton(topWidget: SizedBox(), function: () {}, title: "Test", typeOfController: "GetX"),
+            //   ],
+            // )
           ],
         ),
       ),

@@ -49,7 +49,7 @@ class MenuButton extends StatelessWidget {
                   Container(
                     width: widthContainer * 0.4,
                     height: heightContainer * 0.15,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(5.0), color: black),
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(5.0), color: blackBackground),
                     child: Center(
                       child: Text(
                         "#$typeOfController",
