@@ -1,7 +1,7 @@
 import 'package:bloc_practice/constant/color.dart';
 import 'package:bloc_practice/constant/widgets/custom_app_bar.dart';
 import 'package:bloc_practice/constant/widgets/menu_button.dart';
-import 'package:bloc_practice/counter/counter.dart';
+import 'package:bloc_practice/features/counter/counter.dart';
 import 'package:flutter/material.dart';
 
 class Menu extends StatelessWidget {

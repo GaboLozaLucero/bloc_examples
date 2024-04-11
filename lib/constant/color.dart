@@ -5,3 +5,4 @@ const Color black = Color(0xFF1D1D1F);
 const Color timer = Color(0xFF477090);
 const Color blackBackground = Color(0xFF032132);
 const Color appbarBackground = Color(0xFF2A4858);
+const Color borderContainer = Color(0xFF9E9C9C);
