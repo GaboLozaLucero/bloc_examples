@@ -17,7 +17,7 @@ class CounterView extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 5.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             BlocBuilder<CounterCubit, int>(builder: (context, state) {
               return Container(
@@ -30,9 +30,10 @@ class CounterView extends StatelessWidget {
                   child: Center(
                       child: Text(
                     "$state",
-                    style: const TextStyle(fontSize: 65.0, color: black),
+                    style: const TextStyle(fontSize: 65.0, color: black, fontWeight: FontWeight.bold),
                   )));
             }),
+            SizedBox(height: MediaQuery.of(context).size.height*0.05,),
             Column(
               children: [
                 Row(
@@ -83,7 +84,7 @@ class CounterView extends StatelessWidget {
                 SizedBox(height: MediaQuery.of(context).size.height*0.05,),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.8,
-                  height: MediaQuery.of(context).size.height * 0.1,
+                  height: MediaQuery.of(context).size.height * 0.08,
                   child: ElevatedButton(
                     onPressed: () {
                       context.read<CounterCubit>().reset();
@@ -97,7 +98,7 @@ class CounterView extends StatelessWidget {
                     child: const Icon(
                       Icons.lock_reset,
                       color: Color(0xFFF5F5F7),
-                      size: 70.0,
+                      size: 50.0,
                     ),
                   ),
                 )
