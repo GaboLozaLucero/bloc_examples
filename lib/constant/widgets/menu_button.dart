@@ -23,7 +23,7 @@ class MenuButton extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0),
             ),
-            shadowColor: Colors.grey,
+            shadowColor: Colors.white,
             elevation: 10.0,
             padding: EdgeInsets.zero),
         child: Column(

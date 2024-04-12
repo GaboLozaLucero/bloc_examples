@@ -14,7 +14,14 @@ class Menu extends StatelessWidget {
     return Scaffold(
       // extendBodyBehindAppBar: true,
       backgroundColor: const Color(0xFFFEF9FD),
-      appBar: const CustomAppBar(title: "Bloc examples", leading: Icon(Icons.home_outlined, color: white),),
+      appBar: const CustomAppBar(
+        title: "Bloc examples",
+        leading: Icon(
+          Icons.home_outlined,
+          color: white,
+          size: 30.0,
+        ),
+      ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.only(top: 20.0),
         child: Column(
@@ -73,7 +80,7 @@ class Menu extends StatelessWidget {
                       ),
                     ),
                     function: () {
-                      Navigator.of(context).push(MaterialPageRoute(builder: (_)=>const CounterPage()));
+                      Navigator.of(context).push(MaterialPageRoute(builder: (_) => const CounterPage()));
                     },
                     title: "Counter",
                     typeOfController: "Cubit"),

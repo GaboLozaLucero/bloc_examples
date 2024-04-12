@@ -28,9 +28,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             Positioned.fill(
               child: Center(
                 child: Text(
-                  title,
+                  title.toUpperCase(),
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
+                    fontSize: 20.0,
                     color: white,
                   ),
                 ),
