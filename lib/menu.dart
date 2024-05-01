@@ -27,7 +27,7 @@ class Menu extends StatelessWidget {
       body: SingleChildScrollView(
         padding: const EdgeInsets.only(top: 20.0),
         child: CustomPaint(
-          painter: BackgroundPaint(),
+          //painter: BackgroundPaint(),
           child: Column(
             children: [
               Row(
